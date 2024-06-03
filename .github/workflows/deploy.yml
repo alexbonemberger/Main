@@ -21,7 +21,7 @@ jobs:
         run: dotnet publish -c Release -o release
 
       - name: Adjust base href
-        run: sed -i 's|<base href="/" />|<base href="/Main/" />|' release/wwwroot/index.html
+        run: sed -i 's|<base href="/" />|<base href="/Main/" />|g' release/wwwroot/index.html
 
       - name: Create .nojekyll file
         run: touch release/wwwroot/.nojekyll
@@ -29,5 +29,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.MEUTOKEN }}
           publish_dir: release/wwwroot
