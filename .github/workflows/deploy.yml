@@ -18,7 +18,7 @@ jobs:
       - name: Publish .NET Project
         run: dotnet publish -c Release -o release
       - name: Adjust base href
-        run: sed -i 's|<base href="/" />|<base href="/Main/" />|g' release/wwwroot/index.html
+        run: sed -i 's|<base href="/" />|<base href="/Main/" />|g' release/wwwroot/game.html
       - name: Create .nojekyll file
         run: touch release/wwwroot/.nojekyll
       - name: Deploy to GitHub Pages
