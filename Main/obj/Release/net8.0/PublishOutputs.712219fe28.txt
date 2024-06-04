@@ -1,0 +1,3 @@
+C:\ABWorkspace\BlazorProjects\Main\Main\release\sample-data\weather.json
+C:\ABWorkspace\BlazorProjects\Main\Main\release\wwwroot\game.html
+C:\ABWorkspace\BlazorProjects\Main\Main\release\web.config
