@@ -2,11 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <meta http-equiv="refresh" content="0; URL=./index.html">
+    <meta http-equiv="refresh" content="0; url=/Main/index.html?p=%2F%3F">
+    <script type="text/javascript">
+        // Handle the redirection
+        var segmentCount = 1;
+        var location = window.location;
+        location.replace(location.protocol + "//" + location.hostname + (location.port ? ':' + location.port : '') + location.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' + location.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') + location.search.replace(/&/g, '~and~') + location.hash);
+    </script>
 </head>
 <body>
-    <h1>Page not found</h1>
-    <p>Redirecting to the home page...</p>
 </body>
 </html>
